@@ -91,3 +91,185 @@ h6 {
 }
 
 /*--------------------*/
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.subtitle {
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.subtext {
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 7.33333px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  padding: 0 0 0 103px;
+  position: relative;
+  display: inline-block;
+}
+
+.subtext::before {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 1px;
+  background-color: #ffffff;
+  left: 0;
+  top: 50%;
+}
+
+.header {
+  height: 100vh;
+  position: relative;
+}
+
+.header__slide {
+  width: 100%;
+  height: 100vh;
+  color: #ffffff;
+  background-image: url("../img/header/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.header__body {
+  position: absolute;
+  right: 80px;
+  bottom: 116px;
+  text-align: right;
+}
+
+.header__subtitle {
+  margin: 0 0 5px 0;
+}
+
+.header__title {
+  font-size: 80px;
+  line-height: 86px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 0 48px 0;
+}
+
+.header__subtext {
+  margin: 0 0 8px 0;
+}
+
+.header__text {
+  margin: 0 0 30px 0;
+}
+
+.header__slider-dots {
+  position: absolute;
+  right: 50px;
+  bottom: 36px;
+  max-width: 920px;
+  width: 100%;
+  color: #ffffff;
+  z-index: 999;
+}
+
+.header__slider-dots .slick-current .dots-box {
+  border-top: 4px solid #4AF6CD;
+}
+
+.header__slider-dots .dots-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  height: 28px;
+  border-top: 4px solid #fff;
+  padding: 6px 0 0 0;
+}
+
+.header__slider-dots .dots-box__number {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 800;
+}
+
+.header__slider-dots .dots-box__name {
+  line-height: 19px;
+  font-weight: 300;
+}
+
+/* Слайдер */
+
+/* Слайдер запущен */
+
+/* Слайдер с точками */
+
+/* Ограничивающая оболочка */
+
+.slick-list {
+  overflow: hidden;
+}
+
+/* Лента слайдов */
+
+.slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* Слайд */
+
+/* Слайд активный (показывается) */
+
+/* Слайд основной */
+
+/* Слайд по центру */
+
+/* Клонированный слайд */
+
+/* Стрелка */
+
+/* Стрелка влево */
+
+/* Стрелка вправо */
+
+/* Стрелка не активная */
+
+/* Точки (булиты) */
+
+/* Активная точка */
+
+/* Элемент точки */
+
+.header__slider .slick-arrow {
+  position: absolute;
+  top: 40px;
+  font-size: 0;
+  width: 25px;
+  height: 20px;
+  z-index: 9999;
+}
+
+.header__slider .slick-arrow.slick-prev {
+  right: 125px;
+  background: url("../img/header/arrow-left.svg") 0 0 no-repeat;
+}
+
+.header__slider .slick-arrow.slick-next {
+  right: 80px;
+  background: url("../img/header/arrow-right.svg") 0 0 no-repeat;
+}
+
+.webp .header__slide{ background-image: url(../img/header/header-bg.webp); }
