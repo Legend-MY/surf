@@ -9,6 +9,7 @@ $(document).ready(function () {
   });
 
   $('.header__slider-dots').slick({
+    infinite: false,
     slidesToShow: 4,
     slidesToScroll: 4,
     asNavFor: '.header__slider',

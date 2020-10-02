@@ -1,6 +1,18 @@
 .header {
   height: 100vh;
   position: relative;
+  &__sublogo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 200px;
+    line-height: 156px;
+    font-weight: 800;
+    color: $main;
+    text-transform: uppercase;
+    opacity: 0.07;
+    z-index: 1100;
+  }
   &__slide {
     width: 100%;
     height: 100vh;
@@ -39,7 +51,7 @@
     max-width: 920px;
     width: 100%;
     color: $main;
-    z-index: 999;
+    z-index: 1100;
     .slick-current {
       .dots-box {
         border-top: 4px solid $green-main;
@@ -63,6 +75,79 @@
         font-weight: 300;
       }
     }
+  }
+  &__aside {
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1100;
+    border-right: 1px solid rgba(#fff, .25);
+    text-align: center;
+    color: $main;
+  }
+  &__logo {
+    margin: 0 0 40px 0;
+  }
+  &__menu {
+    margin: 0 0 45px 0;
+  }
+  &__search {
+    margin: 0 0 20px 0;
+  }
+  &__date {
+    font-size: 72px;
+    line-height: 64px;
+    font-weight: 800;
+    margin: 0 0 15px 0;
+    span {
+      display: block;
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: 300;
+      letter-spacing: 1.4px;
+    }
+  }
+  &__location {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 300;
+    letter-spacing: 1.05px;
+    padding: 0 0 0 19px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 11px;
+      height: 13px;
+      background-image: url('../img/header/location-icon.svg');
+      left: 0;
+      top: 0;
+    }
+  }
+  &__arrows {
+    position: absolute;
+    left: 209px;
+    bottom: 30px;
+    z-index: 1100;
+    cursor: pointer;
+  }
+  &__map {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1100;
+  }
+}
+.road-animtaion {
+  stroke-dashoffset: 600;
+  stroke-dasharray: 600;
+  animation: animdash 5s infinite 6s;
+}
+@keyframes animdash {
+  to {
+    stroke-dashoffset: 0;
   }
 }
 
@@ -114,7 +199,7 @@
   font-size: 0;
   width: 25px;
   height: 20px;
-  z-index: 9999;
+  z-index: 1100;
 }
 .header__slider .slick-arrow.slick-prev{
   right: 125px;
