@@ -3,13 +3,19 @@ body {
   font-size: 16px;
   font-weight: 400;
 }
+.title {
+  font-size: 80px;
+  line-height: 86px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
 .subtitle {
   font-size: 40px;
   line-height: 44px;
   font-weight: 800;
   text-transform: uppercase;
 }
-.subtext {
+.subtitle-text {
   font-size: 22px;
   line-height: 32px;
   letter-spacing: 7.33333px;
@@ -26,5 +32,71 @@ body {
     background-color: $main;
     left: 0;
     top: 50%;
+  }
+}
+
+@media (max-width: 1366px) {
+  .title {
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 60px;
+    line-height: 46px;
+  }
+  .subtitle {
+    font-size: 36px;
+    line-height: 38px;
+  }
+  .subtitle-text {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 0 0 0 45px;
+    &::before {
+      content: '';
+      width: 35px;
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  .title {
+    font-size: 36px;
+    line-height: 32px;
+  }
+  .subtitle {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .subtitle-text {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0 0 0 30px;
+    &::before {
+      content: '';
+      width: 20px;
+    }
+  }
+}
+
+@media (max-height: 570px) {
+  .title {
+    font-size: 42px;
+    line-height: 32px;
+  }
+  .subtitle {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .subtitle-text {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0 0 0 30px;
+    &::before {
+      content: '';
+      width: 20px;
+    }
   }
 }

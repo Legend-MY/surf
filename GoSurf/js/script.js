@@ -15,4 +15,12 @@ $(document).ready(function () {
     asNavFor: '.header__slider',
   });
 
+
+  // Burger and menu add Class
+  $('.header__burger').click(function () {
+    $('.menu').toggleClass('menu_active');
+    $('.header__burger').toggleClass('header__burger_active');
+    $('body').toggleClass('lock');
+  });
+
 });

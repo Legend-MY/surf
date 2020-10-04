@@ -1,17 +1,8 @@
 .header {
   height: 100vh;
   position: relative;
-  &__sublogo {
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 200px;
-    line-height: 156px;
-    font-weight: 800;
-    color: $main;
-    text-transform: uppercase;
-    opacity: 0.07;
-    z-index: 1100;
+  &__burger {
+    display: none;
   }
   &__slide {
     width: 100%;
@@ -28,21 +19,14 @@
     bottom: 116px;
     text-align: right;
   }
+  &__title {
+    margin: 0 0 48px 0;
+  }
   &__subtitle {
     margin: 0 0 5px 0;
   }
-  &__title {
-    font-size: 80px;
-    line-height: 86px;
-    font-weight: 800;
-    text-transform: uppercase;
-    margin: 0 0 48px 0;
-  }
-  &__subtext {
+  &__subtitle-text {
     margin: 0 0 8px 0;
-  }
-  &__text {
-    margin: 0 0 30px 0;
   }
   &__slider-dots {
     position: absolute;
@@ -53,11 +37,11 @@
     color: $main;
     z-index: 1100;
     .slick-current {
-      .dots-box {
+      .dots-body {
         border-top: 4px solid $green-main;
       }
     }
-    .dots-box {
+    .dots-body {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -88,12 +72,28 @@
   }
   &__logo {
     margin: 0 0 40px 0;
+    img {
+      width: 100%;
+    }
+  }
+  &__sublogo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 200px;
+    line-height: 156px;
+    font-weight: 800;
+    color: $main;
+    text-transform: uppercase;
+    opacity: 0.07;
+    z-index: 1100;
   }
   &__menu {
     margin: 0 0 45px 0;
   }
   &__search {
     margin: 0 0 20px 0;
+    cursor: pointer;
   }
   &__date {
     font-size: 72px;
@@ -140,7 +140,7 @@
     z-index: 1100;
   }
 }
-.road-animtaion {
+.map-animtaion {
   stroke-dashoffset: 600;
   stroke-dasharray: 600;
   animation: animdash 5s infinite 6s;
@@ -151,13 +151,7 @@
   }
 }
 
-// SLick slider
-/* Слайдер */
-.slick-slider{}
-/* Слайдер запущен */
-.slick-slider.slick-initialized{}
-/* Слайдер с точками */
-.slick-slider.slick-dotted{}
+// Общие настройки слайдеров
 /* Ограничивающая оболочка */
 .slick-list {
   overflow: hidden;
@@ -166,32 +160,6 @@
 .slick-track{
   display: flex;
 }
-/* Слайд */
-.slick-slide{}
-/* Слайд активный (показывается) */
-.slick-slide.slick-active{}
-/* Слайд основной */
-.slick-slide.slick-current{}
-/* Слайд по центру */
-.slick-slide.slick-center{}
-/* Клонированный слайд */
-.slick-slide.slick-cloned{}
-/* Стрелка */
-.slick-arrow{}
-/* Стрелка влево */
-.slick-arrow.slick-prev{}
-/* Стрелка вправо */
-.slick-arrow.slick-next{}
-/* Стрелка не активная */
-.slick-arrow.slick-disabled{}
-/* Точки (булиты) */
-.slick-dots{}
-.slick-dots li{}
-/* Активная точка */
-.slick-dots li.slick-active{}
-/* Элемент точки */
-.slick-dots li button{}
-
 // Главный большой слайдер
 .header__slider .slick-arrow {
   position: absolute;
@@ -208,4 +176,221 @@
 .header__slider .slick-arrow.slick-next{
   right: 80px;
   background: url('../img/header/arrow-right.svg') 0 0 no-repeat;
+}
+
+
+@media (max-width: 1440px) {
+  .header {
+    &__logo {
+      width: 110px;
+    }
+    &__sublogo {
+      font-size: 110px;
+      line-height: 100%;
+      left: 60px;
+      top: 0;
+    }
+    &__title {
+      margin: 0 0 30px 0;
+    }
+    &__subtitle {
+      margin: 0 0 20px 0;
+    }
+    &__menu {
+      margin: 0 0 25px 0;
+    }
+    &__date {
+      font-size: 61px;
+    }
+    &__search {
+      margin: 0 0 15px 0;
+    }
+    &__map {
+      svg {
+        width: 600px;
+        height: 300px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1366px) {
+  .header {
+    &__aside {
+      display: flex;
+      align-items: flex-start;
+      border-right: none;
+      height: 118px;
+      background-color: rgba(#fff, 0.1);
+      padding: 0 20px 0 0;
+    }
+    &__search {
+      margin: 40px 0;
+    }
+    &__date {
+      margin: 7px 15px 0 15px;
+    }
+    &__location {
+      margin: 50px 0 0 0;
+    }
+    &__map {
+      svg {
+        width: 500px;
+        height: 250px;
+      }
+    }
+    &__arrows {
+      left: 15px;
+      bottom: 15px;
+    }
+    &__slider .slick-arrow.slick-prev{
+      right: 60px;
+    }
+    &__slider .slick-arrow.slick-next{
+      right: 25px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    &__burger {
+      display: block;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      right: 35px;
+      top: 70px;
+      transform: rotate(0deg);
+      z-index: 1100;
+      cursor: pointer;
+      transition: 0.5s ease-in-out;
+      background-color: #3d3d3d;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 25px;
+        background: $green-main;
+        opacity: 1;
+        left: 50%;
+        transform: rotate(0deg) translateX(-50%);
+        transition: 0.5s ease-in-out;
+        &:nth-child(1) {
+          top: 30%;
+        }
+        &:nth-child(2) {
+          top: 50%;
+        }
+        &:nth-child(3) {
+          top: 70%;
+        }
+      }
+      &_active {
+        span {
+          &:nth-child(1) {
+            left: 18%;
+            top: 18px;
+            transform: rotate(135deg);
+          }
+          &:nth-child(2) {
+            opacity: 0;
+            left: -20px;
+          }
+          &:nth-child(3) {
+            left: 18%;
+            top: 18px;
+            transform: rotate(-135deg);
+          }
+        }
+      }
+    }
+    &__body {
+      right: 30px;
+      bottom: 75px;
+    }
+    &__title {
+      margin: 0 0 20px 0;
+    }
+    &__slider-dots {
+      right: 0;
+      .dots-body {
+        width: 130px;
+      }
+    }
+    &__search {
+      margin: 40px 0 40px 15px;
+    }
+    &__arrows {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  .header {
+    &__burger {
+      top: 60px;
+    }
+    &__title {
+      margin: 0 0 10px 0;
+    }
+    &__subtitle {
+      margin: 0 0 5px 0;
+    }
+    &__slider .slick-arrow {
+      top: 25px;
+    }
+    &__slider-dots {
+      display: none;
+    }
+    &__aside {
+      display: block;
+      height: auto;
+      padding: 0 10px 10px 10px;
+    }
+    &__logo {
+      width: 80px;
+      margin: 0 0 20px 0;
+    }
+    &__sublogo {
+      font-size: 70px;
+      left: 10px;
+    }
+    &__search, &__date {
+      margin: 0;
+    }
+    &__date {
+      font-size: 46px;
+    }
+    &__location {
+      margin: 20px 0 0 0;
+    }
+    &__map {
+      svg {
+        width: 450px;
+        height: 225px;
+      }
+    }
+  }
+}
+
+@media (max-height: 570px) {
+  .header {
+    &__body {
+      right: 30px;
+      bottom: 10px;
+    }
+    &__title {
+          margin: 0 0 10px 0;
+    }
+    &__subtitle {
+      margin: 0;
+    }
+    &__slider-dots {
+      display: none;
+    }
+  }
 }
