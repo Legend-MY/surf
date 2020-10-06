@@ -19,6 +19,10 @@
     text-align: right;
   }
   &__title {
+    font-size: 80px;
+    line-height: 86px;
+    font-weight: 800;
+    text-transform: uppercase;
     margin: 0 0 48px 0;
   }
   &__subtitle {
@@ -217,6 +221,9 @@
 
 @media (max-width: 1366px) {
   .header {
+    &__title {
+      line-height: 60px;
+    }
     &__aside {
       display: flex;
       align-items: flex-start;
@@ -313,6 +320,7 @@
       bottom: 75px;
     }
     &__title {
+      font-size: 60px;
       margin: 0 0 20px 0;
     }
     &__slider-dots {
@@ -336,6 +344,8 @@
       top: 60px;
     }
     &__title {
+      font-size: 36px;
+      line-height: 32px;
       margin: 0 0 10px 0;
     }
     &__subtitle {
@@ -385,7 +395,8 @@
       bottom: 10px;
     }
     &__title {
-          margin: 0 0 10px 0;
+      font-size: 42px;
+      margin: 0 0 10px 0;
     }
     &__subtitle {
       margin: 0;

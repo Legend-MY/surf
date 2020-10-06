@@ -2,6 +2,8 @@
 ;
 
 $(document).ready(function () {
+
+  // Header section
   $('.header__slider').slick({
     infinite: true,
     fade: true,
@@ -15,12 +17,17 @@ $(document).ready(function () {
     asNavFor: '.header__slider',
   });
 
-
   // Burger and menu add Class
   $('.header__burger').click(function () {
     $('.menu').toggleClass('menu_active');
     $('.header__burger').toggleClass('header__burger_active');
     $('body').toggleClass('lock');
+  });
+
+  // Surf section
+  $('.surf__slider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
   });
 
 });
