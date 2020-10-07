@@ -97,6 +97,11 @@ body {
 }
 
 @media (max-width: 1024px) {
+  .title {
+    &__subname {
+      font-size: 140px;
+    }
+  }
   .subtitle {
     font-size: 36px;
     line-height: 38px;
@@ -112,7 +117,34 @@ body {
   }
 }
 
+@media (max-width: 890px) {
+  .btn {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 740px) {
+  .title {
+    &__subname {
+      font-size: 0;
+    }
+    &__name {
+      position: static;
+    }
+  }
+}
+
 @media (max-width: 570px) {
+  .title {
+    &__name {
+      font-size: 50px;
+      line-height: 60px;
+      &::before {
+        content: '';
+        width: 50px;
+      }
+    }
+  }
   .subtitle {
     font-size: 28px;
     line-height: 32px;

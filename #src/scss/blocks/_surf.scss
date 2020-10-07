@@ -175,9 +175,6 @@
     &:nth-child(4n+1) {
       margin-top: 32px;
     }
-    &:nth-child(4n+1) {
-      margin-top: 32px;
-    }
     &:nth-child(4n+3) {
       margin-top: 90px;
     }
@@ -268,6 +265,7 @@
 
 @media (max-width: 1366px) {
   .surf {
+    padding: 100px 0;
     &__map {
       max-width: 992px;
       min-height: 525px;
@@ -315,7 +313,6 @@
 
 @media (max-width: 1123px) {
   .surf {
-    padding: 100px 0;
     &__description {
       &::after {
         content: '';
@@ -327,18 +324,98 @@
 
 @media (max-width: 1080px) {
   .surf {
+    &__map {
+      max-width: 100%;
+      min-height: 250px;
+      background-image: none;
+      margin: 30px auto 60px auto;
+      .slick-list {
+        overflow: hidden;
+      }
+      .slick-track {
+        min-height: 250px;
+      }
+      .slick-current {
+        .surf__description {
+          background-color: #3b5f61;
+        }
+      }
+      &-slide {
+        position: static;
+      }
+    }
     &__circle {
       display: none;
     }
     &__description {
       display: block;
-      position: absolute;
-      transform: translateX(-47%);
-      z-index: 1100;
+      transform: translateX(0);
       &::after {
         content: '';
         display: none;
       }
+    }
+  }
+}
+
+@media (max-width: 890px) {
+  .surf {
+    &__slide {
+      min-height: 450px;
+      &:nth-child(4n+1) {
+        margin-top: 20px;
+      }
+      &:nth-child(4n+3) {
+        margin-top: 50px;
+      }
+    }
+    &__slide-name {
+      font-size: 36px;
+      padding: 40px 0 0 25px;
+    }
+    &__slide-location {
+      font-size: 14px;
+      letter-spacing: 5px;
+      left: 40px;
+      bottom: 60px;
+    }
+    &__slide-link {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: none;
+      span {
+        padding: 17px 57px 17px 17px;
+      }
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .surf {
+    padding: 60px 0;
+    &__title {
+      transform: translateX(0);
+      margin: 0 0 0 15px;
+    }
+    &__head {
+      margin: -25px 15px 0 0;
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .surf {
+    &__head {
+      margin: 0 15px 0 0;
+    }
+    &__description {
+      width: 195px;
+      padding: 15px;
+    }
+    &__location {
+      margin: 0 0 15px 0;
     }
   }
 }

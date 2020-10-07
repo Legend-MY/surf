@@ -35,6 +35,27 @@ $(document).ready(function () {
         settings: {
           slidesToShow: 3,
         }
+      },
+      {
+        breakpoint: 890,
+        settings: {
+          slidesToShow: 3,
+          initialSlide: 1,
+        }
+      },
+      {
+        breakpoint: 740,
+        settings: {
+          slidesToShow: 2,
+          initialSlide: 1,
+        }
+      },
+      {
+        breakpoint: 460,
+        settings: {
+          slidesToShow: 1,
+          initialSlide: 1,
+        }
       }
     ]
   });
@@ -46,6 +67,34 @@ $(document).ready(function () {
     focusOnSelect: true,
     arrows: false,
     asNavFor: '.surf__slider',
+    responsive: [
+      {
+        breakpoint: 1080,
+        settings: {
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 890,
+        settings: {
+          infinite: true,
+          slidesToShow: 2,
+          initialSlide: 1,
+          centerMode: true,
+        }
+      },
+      {
+        breakpoint: 740,
+        settings: {
+          infinite: true,
+          slidesToShow: 1,
+          initialSlide: 1,
+          centerMode: true,
+        }
+      }
+    ]
   });
 
 });
