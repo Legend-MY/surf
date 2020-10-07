@@ -25,8 +25,27 @@ $(document).ready(function () {
 
   // Surf section
   $('.surf__slider').slick({
+    infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
+    asNavFor: '.surf__map',
+    responsive: [
+      {
+        breakpoint: 1124,
+        settings: {
+          slidesToShow: 3,
+        }
+      }
+    ]
+  });
+
+  $('.surf__map').slick({
+    infinite: false,
+    slidesToShow: 8,
+    slidesToScroll: 8,
+    focusOnSelect: true,
+    arrows: false,
+    asNavFor: '.surf__slider',
   });
 
 });

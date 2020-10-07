@@ -3,6 +3,13 @@
     &:not(:last-child) {
       margin-bottom: 20px;
     }
+    &:hover {
+      .menu__link {
+        span {
+          color: $green-main;
+        } 
+      }
+    }
   }
   &__link {
     span {
@@ -24,13 +31,6 @@
       display: inline-block;
       &:not(:last-child) {
       margin-bottom: 0;
-      }
-      &:hover {
-        .menu__link {
-          span {
-            color: $green-main;
-          } 
-        }
       }
     }
     &__link {
