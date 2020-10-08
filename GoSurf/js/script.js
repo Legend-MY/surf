@@ -98,4 +98,9 @@ $(document).ready(function () {
     ]
   });
 
+  // Travel section
+  $('.section-slider').slick({
+    infinite: true,
+    fade: true,
+  });
 });
