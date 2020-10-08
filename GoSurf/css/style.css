@@ -944,6 +944,12 @@ body {
     position: static;
   }
 
+  .surf__map-slide_8 .surf__description {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+  }
+
   .surf__circle {
     display: none;
   }

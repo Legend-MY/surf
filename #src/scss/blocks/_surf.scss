@@ -342,6 +342,11 @@
       }
       &-slide {
         position: static;
+        &_8 {
+          .surf__description {
+            transform: translateX(0);
+          }
+        }
       }
     }
     &__circle {
