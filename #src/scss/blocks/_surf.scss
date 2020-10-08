@@ -15,11 +15,6 @@
     display: inline-block;
     text-align: right;
   }
-  &__subtitle {
-    span {
-      font-weight: 100;
-    }
-  }
 
   // Первый слайдер
   &__map {
@@ -224,9 +219,6 @@
     left: 0;
     right: 0;
     display: none;
-    span {
-      padding: 17px 57px 17px 17px;
-    }
   }
 }
 
@@ -383,16 +375,6 @@
       letter-spacing: 5px;
       left: 40px;
       bottom: 60px;
-    }
-    &__slide-link {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      display: none;
-      span {
-        padding: 17px 57px 17px 17px;
-      }
     }
   }
 }

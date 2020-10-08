@@ -42,6 +42,9 @@ body {
   line-height: 44px;
   font-weight: 800;
   text-transform: uppercase;
+  span {
+    font-weight: 100;
+  }
 }
 .subtitle-text {
   font-size: 22px;
@@ -73,6 +76,7 @@ body {
     background-color: $green-main;
     position: relative;
     margin-left: 10px;
+    padding: 17px 57px 17px 17px;
     &::before {
       content: '';
       width: 20px;

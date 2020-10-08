@@ -141,6 +141,10 @@ body {
   text-transform: uppercase;
 }
 
+.subtitle span {
+  font-weight: 100;
+}
+
 .subtitle-text {
   font-size: 22px;
   line-height: 32px;
@@ -175,6 +179,7 @@ body {
   background-color: #4AF6CD;
   position: relative;
   margin-left: 10px;
+  padding: 17px 57px 17px 17px;
 }
 
 .btn span::before {
@@ -466,10 +471,6 @@ body {
   text-align: right;
 }
 
-.surf__subtitle span {
-  font-weight: 100;
-}
-
 .surf__map {
   max-width: 1260px;
   min-height: 650px;
@@ -718,10 +719,6 @@ body {
   left: 0;
   right: 0;
   display: none;
-}
-
-.surf__slide-link span {
-  padding: 17px 57px 17px 17px;
 }
 
 .surf__slider .slick-track {
@@ -1131,18 +1128,6 @@ body {
     letter-spacing: 5px;
     left: 40px;
     bottom: 60px;
-  }
-
-  .surf__slide-link {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: none;
-  }
-
-  .surf__slide-link span {
-    padding: 17px 57px 17px 17px;
   }
 }
 
