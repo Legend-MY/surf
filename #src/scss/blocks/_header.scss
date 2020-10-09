@@ -1,6 +1,7 @@
 .header {
   height: 100vh;
   position: relative;
+  margin: 0 0 130px 0;
   &__burger {
     display: none;
   }
@@ -262,6 +263,7 @@
 
 @media (max-width: 1024px) {
   .header {
+    margin: 0 0 80px 0;
     &__burger {
       display: block;
       width: 40px;

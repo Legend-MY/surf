@@ -1,0 +1,237 @@
+// travel and sleep sections
+.section-slider {
+  position: relative;
+  &__head {
+    min-height: 780px;
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+  .section__text {
+    text-align: right;
+  }
+  &__text {
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+  }
+  &__body {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 0 70px 0;
+    &-item {
+      position: relative;
+      min-height: 200px;
+    }
+    &-name {
+      font-size: 40px;
+      font-weight: 800;
+      text-transform: uppercase;
+      span {
+        display: block;
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 400;
+        text-align: right;
+        letter-spacing: 5.25px;
+        opacity: 0.75;
+      }
+    }
+    &-subname {
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      text-align: right;
+      opacity: 0.5;
+      transform: rotate(-90deg);
+      width: 200px;
+      height: 0;
+      position: absolute;
+      left: -135px;
+      top: 97px;
+    }
+  }
+  &__btn {
+    text-align: center;
+  }
+
+  .slick-arrow {
+    position: absolute;
+    top: 170px;
+    font-size: 0;
+    width: 25px;
+    height: 20px;
+    opacity: 0.25;
+    z-index: 1100;
+  }
+  .slick-arrow.slick-prev{
+    right: 125px;
+    background: url('../img/header/arrow-left.svg') 0 0 no-repeat;
+  }
+  .slick-arrow.slick-next{
+    right: 80px;
+    background: url('../img/header/arrow-right.svg') 0 0 no-repeat;
+  }
+}
+
+
+.travel {
+  padding: 0 0 240px 0;
+  background-image: url('../img/travel/travel-bg.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  &__text {
+    padding: 70px 0 0 0;
+    margin: 0 80px 0 0;
+    &_left {
+      margin: 0 0 0 135px;
+      padding: 175px 0 0 0;
+      .subtitle-text {
+        padding: 0 103px 0 0;
+        &::before {
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+  }
+  &__subtitle {
+    img {
+      padding: 0 0 0 25px;
+    }
+  }
+  &__subtitle-text {
+    margin: 0 0 8px 0;
+  }
+  &__airline {
+    min-height: 300px;
+    margin: -270px 0 0 0;
+  }
+}
+
+@media (max-width: 1140px) {
+  .section-slider {
+    &__text {
+      background-position: right -80px;
+    }
+    &__body {
+      display: block;
+      margin: 0 0 20px 35px;
+      &-item {
+        position: relative;
+        min-height: auto;
+        &:not(:last-child) {
+          margin: 0 0 20px 0;
+        }
+      }
+      &-name {
+        font-size: 32px;
+        line-height: 36px;
+        span {
+          text-align: left;
+        }
+      }
+      &-subname {
+        font-size: 14px;
+        line-height: 16px;
+        text-align: left;
+        transform: rotate(0);
+        height: auto;
+        position: static;
+      }
+    }
+  }
+  .travel {
+    &__text {
+      &_left {
+        margin: 0 0 0 35px;
+        .subtitle-text {
+          padding: 0 45px 0 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .section-slider {
+    &__head {
+      min-height: 720px;
+    }
+  }
+  .travel {
+    &__title {
+      margin: 0 0 0 15px;
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  .section-slider {
+    &__head {
+      min-height: 600px;
+      background-size: cover;
+    }
+    &__text {
+      background-image: none !important;
+    }
+    &__body {
+      &-name {
+        font-size: 24px;
+        line-height: 26px;
+      }
+      &-subname {
+        font-size: 12px;
+        letter-spacing: 5px;
+      }
+    }
+    .slick-arrow {
+      top: 110px;
+    }
+    .slick-arrow.slick-prev{
+      right: 55px;
+    }
+    .slick-arrow.slick-next{
+      right: 20px;
+    }
+  }
+  .travel {
+    padding: 0 0 20px 0;
+    background-size: 40%;
+    &__text {
+      padding: 35px 0 0 0;
+      margin: 0 20px 0 0;
+      &_left {
+        padding: 175px 0 0 0;
+        .subtitle-text {
+          padding: 0 30px 0 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .section-slider {
+    .slick-arrow {
+      top: 130px;
+    }
+  }
+  .travel {
+    &__text {
+      &_left {
+        margin: 0 0 0 10px;
+      }
+    }
+    &__subtitle {
+      position: relative;
+      img {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

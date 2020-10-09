@@ -1,5 +1,5 @@
 .surf {
-  padding: 160px 0;
+  margin: 0 0 130px 0;
   background-image: url('../img/surf/location-bg.png');
   background-repeat: no-repeat;
   background-position: right 200px;
@@ -254,7 +254,6 @@
 
 @media (max-width: 1366px) {
   .surf {
-    padding: 100px 0;
     &__map {
       max-width: 992px;
       min-height: 525px;
@@ -313,6 +312,7 @@
 
 @media (max-width: 1080px) {
   .surf {
+    margin: 0 0 80px 0;
     &__map {
       max-width: 100%;
       min-height: 250px;
@@ -378,9 +378,7 @@
 
 @media (max-width: 740px) {
   .surf {
-    padding: 60px 0;
     &__title {
-      transform: translateX(0);
       margin: 0 0 0 15px;
     }
     &__head {

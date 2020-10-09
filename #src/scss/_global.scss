@@ -101,79 +101,11 @@ body {
   }
 }
 
-// travel and sleep sections
-.section-slider {
-  position: relative;
-  &__head {
-    min-height: 780px;
-    background-repeat: no-repeat;
-    background-position: left top;
-  }
-  .section__text {
-    text-align: right;
-  }
-  &__text {
-    background-repeat: no-repeat;
-    background-position: right top;
-  }
-  &__body {
-    display: flex;
-    justify-content: space-around;
-    margin: 0 0 70px 0;
-    &-item {
-      position: relative;
-      min-height: 200px;
+@media (max-width: 1140px) {
+  .title {
+    &__subname {
+      font-size: 150px;
     }
-    &-name {
-      font-size: 40px;
-      font-weight: 800;
-      text-transform: uppercase;
-      span {
-        display: block;
-        font-size: 14px;
-        line-height: 26px;
-        font-weight: 400;
-        text-align: right;
-        letter-spacing: 5.25px;
-        opacity: 0.75;
-      }
-    }
-    &-subname {
-      font-size: 18px;
-      line-height: 22px;
-      letter-spacing: 8px;
-      text-transform: uppercase;
-      white-space: nowrap;
-      text-align: right;
-      opacity: 0.5;
-      transform: rotate(-90deg);
-      width: 200px;
-      height: 0;
-      position: absolute;
-      left: -135px;
-      top: 97px;
-    }
-  }
-  &__btn {
-    text-align: center;
-  }
-
-  .slick-arrow {
-    position: absolute;
-    top: 100px;
-    font-size: 0;
-    width: 25px;
-    height: 20px;
-    opacity: 0.25;
-    z-index: 1100;
-  }
-  .slick-arrow.slick-prev{
-    right: 125px;
-    background: url('../img/header/arrow-left.svg') 0 0 no-repeat;
-  }
-  .slick-arrow.slick-next{
-    right: 80px;
-    background: url('../img/header/arrow-right.svg') 0 0 no-repeat;
   }
 }
 
@@ -206,6 +138,7 @@ body {
 
 @media (max-width: 740px) {
   .title {
+    transform: translateX(0);
     &__subname {
       font-size: 0;
     }
