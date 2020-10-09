@@ -93,6 +93,22 @@
   }
 }
 
+.sleep {
+  .section-slider {
+    &__stars {
+      display: inline-block;
+    }
+    &__star {
+      padding: 0;
+      // width: 22px;
+      // height: 22px;
+    }
+    .star {
+      
+    }
+  }
+}
+
 @media (max-width: 1240px) {
   .section-slider {
     &__titles {

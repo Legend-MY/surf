@@ -872,6 +872,14 @@ body {
   background: url("../img/header/arrow-right.svg") 0 0 no-repeat;
 }
 
+.sleep .section-slider__stars {
+  display: inline-block;
+}
+
+.sleep .section-slider__star {
+  padding: 0;
+}
+
 @media (max-width: 1600px) {
   .header__sublogo {
     font-size: 110px;
