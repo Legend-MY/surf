@@ -1,9 +1,11 @@
+.travel {
+    background-image: url('../img/travel/travel-bg.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
 .section-slider {
   padding: 0 0 230px 0;
   position: relative;
-  background-image: url('../img/travel/travel-bg.png');
-  background-repeat: no-repeat;
-  background-position: right bottom;
   &__head {
     min-height: 780px;
     background-repeat: no-repeat;
@@ -30,8 +32,8 @@
   }
   &__body {
     min-height: 300px;
-    background-repeat: no-repeat;
-    background-position: right bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-position: right bottom, right top;
   }
   &__info {
     display: flex;
@@ -40,7 +42,7 @@
     &-item {
       min-height: 200px;
       position: relative;
-      span {
+      p {
         display: block;
         font-size: 14px;
         line-height: 36px;
@@ -54,6 +56,7 @@
       font-size: 40px;
       font-weight: 800;
       text-transform: uppercase;
+      position: relative;
     }
     &-subname {
       font-size: 18px;
@@ -67,8 +70,20 @@
       width: 200px;
       height: 0;
       position: absolute;
-      left: -130px;
+      left: -140px;
       top: 97px;
+    }
+  }
+  &__rating {
+    display: flex;
+    align-items: center;
+  }
+  &__stars {
+    margin: 0 0 0 25px;
+    img {
+      display: inline-block;
+      padding: 0;
+      margin: 0 0 0 -25px;
     }
   }
   &__link {
@@ -94,19 +109,81 @@
 }
 
 .sleep {
+  position: relative;
+  background-image: url('../img/sleep/sleep-bg.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
   .section-slider {
-    &__stars {
-      display: inline-block;
+    padding: 0 0 80px 0;
+    &__titles {
+      &_left {
+        padding: 140px 0 0 0;
+        margin: -210px 0 0 130px;
+      }
     }
-    &__star {
-      padding: 0;
-      // width: 22px;
-      // height: 22px;
-    }
-    .star {
-      
+    &__body {
+      padding: 0 0 200px 0;
     }
   }
+}
+
+.quantity {
+  display: inline-block;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]
+{
+  -moz-appearance: textfield;
+}
+
+.quantity input {
+  width: 43px;
+  height: 42px;
+  display: block;
+  border: none;
+  background-color: transparent;
+  font-size: 40px;
+  font-weight: 800;
+  color: $main;
+}
+
+.quantity input:focus {
+  outline: 0;
+}
+
+.quantity-nav {
+  float: left;
+  position: static;
+  height: 42px;
+}
+
+.quantity-button {
+  position: relative;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quantity-button.quantity-up {
+  position: absolute;
+  top: 45px;
+  right: 0;
+}
+
+.quantity-button.quantity-down {
+  position: absolute;
+  top: 45px;
+  right: 25px;
 }
 
 @media (max-width: 1240px) {
@@ -128,9 +205,6 @@
     &__titles {
       &_left {
         margin: -290px 0 0 30px;
-        .section-slider__subtitle-text {
-          padding: 0 45px 0 0;
-        }
       }
     }
     &__info {
@@ -141,7 +215,7 @@
         &:not(:last-child) {
           margin: 0 0 30px 0;
         }
-        span {
+        p {
           text-align-last: left;
         }
       }
@@ -153,12 +227,54 @@
       }
     }
   }
+  .sleep {
+    .section-slider {
+      &__titles {
+        &_left {
+          margin: -290px 0 0 30px;
+        }
+      }
+      &__body {
+        margin: 0;
+      }
+      &__info {
+        margin: -100px 0 0 30px;
+      }
+    }
+  }
+  .quantity {
+    height: 60px;
+  }
+  .quantity-button.quantity-up {
+      left: 165px;
+    }
+
+    .quantity-button.quantity-down {
+      left: 135px;
+    }
+}
+
+@media (max-width: 1024px) {
+  .section-slider {
+    &__titles {
+      &_left {
+        .section-slider__subtitle-text {
+          padding: 0 45px 0 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 890px) {
+  .section-slider {
+    &__body {
+      background-size: auto, 57%;
+    }
+  }
 }
 
 @media (max-width: 768px) {
-  .travel__title {
-    margin: 0 0 0 15px;
-  }
   .section-slider {
     &__titles {
       margin: 0 30px 0 0;
@@ -175,6 +291,22 @@
     }
     .slick-arrow.slick-next{
       right: 30px;
+    }
+  }
+  .sleep {
+    .section-slider {
+      &__titles {
+        &_left {
+          padding: 200px 0 0 0;
+        }
+      }
+      &__body {
+        padding: 0;
+        margin: 0 0 60px 0;
+      }
+      &__info {
+        margin: 0 0 0 30px;
+      }
     }
   }
 }
@@ -207,6 +339,20 @@
       top: 170px;
     }
   }
+  .sleep {
+    .section-slider {
+      &__body {
+        margin: 0;
+      }
+    }
+  }
+  .quantity-button.quantity-up {
+    left: 135px;
+  }
+
+  .quantity-button.quantity-down {
+    left: 105px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -228,8 +374,28 @@
       min-height: auto;
       margin: 0 0 50px 0;
     }
+    &__rating {
+      display: block;
+    }
+    &__stars {
+      margin: 0 0 0 10px;
+      img {
+        position: static;
+        display: inline-block;
+        padding: 0;
+        margin: 0 0 0 -25px;
+        transform: translateY(0);
+      }
+    }
     .slick-arrow {
       top: 200px;
+    }
+  }
+  .sleep {
+    .section-slider {
+      &__body {
+        margin: 0 0 50px 0;
+      }
     }
   }
 }

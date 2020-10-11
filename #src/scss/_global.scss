@@ -139,6 +139,7 @@ body {
 @media (max-width: 740px) {
   .title {
     transform: translateX(0);
+    margin: 0 0 0 15px;
     &__subname {
       font-size: 0;
     }

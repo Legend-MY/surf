@@ -2,7 +2,7 @@
   margin: 0 0 130px 0;
   background-image: url('../img/surf/location-bg.png');
   background-repeat: no-repeat;
-  background-position: right 200px;
+  background-position: right 80px;
   background-size: auto;
   &__head {
     text-align: right;
@@ -378,9 +378,6 @@
 
 @media (max-width: 740px) {
   .surf {
-    &__title {
-      margin: 0 0 0 15px;
-    }
     &__head {
       margin: -25px 15px 0 0;
     }
