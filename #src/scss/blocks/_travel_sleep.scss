@@ -78,14 +78,6 @@
     display: flex;
     align-items: center;
   }
-  &__stars {
-    margin: 0 0 0 25px;
-    img {
-      display: inline-block;
-      padding: 0;
-      margin: 0 0 0 -25px;
-    }
-  }
   &__link {
     text-align: center;
   }
@@ -376,16 +368,6 @@ input[type=number]
     }
     &__rating {
       display: block;
-    }
-    &__stars {
-      margin: 0 0 0 10px;
-      img {
-        position: static;
-        display: inline-block;
-        padding: 0;
-        margin: 0 0 0 -25px;
-        transform: translateY(0);
-      }
     }
     .slick-arrow {
       top: 200px;
