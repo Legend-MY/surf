@@ -2121,6 +2121,10 @@ input[type=number] {
   .header__slider-dots {
     display: none;
   }
+
+  .shop__subtitle-text_left {
+    padding: 0 30px 0 0;
+  }
 }
 
 .webp .header__slide{ background-image: url(../img/header/header-bg.webp); }

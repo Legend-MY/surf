@@ -57,9 +57,9 @@
       <div class="header__slide">
         <div class="header__body">
           <div class="header__subtitle-text subtitle-text">Surf</div>
-          <div class="header__title">North Shore</div>
+          <div class="header__title wow animate__animated animate__fadeInLeft">North Shore</div>
           <div class="header__subtitle-text subtitle-text">Condition</div>
-          <div class="header__subtitle subtitle">Radical</div>
+          <div class="header__subtitle subtitle wow animate__animated animate__fadeInRight">Radical</div>
           <a href="#" class="header__link">
             <img src="img/header/arrow-right.svg" alt="link">
           </a>
@@ -99,7 +99,7 @@
         </div>
       </div>
     </div>
-    <div class="header__slider-dots">
+    <div class="header__slider-dots wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
       <div class="dots-item">
         <div class="dots-body">
           <div class="dots-body__number">01</div>
@@ -134,25 +134,25 @@
       <nav class="header__menu menu">
         <ul class="menu__list">
           <li class="menu__item">
-            <a href="#" class="menu__link">
+            <a href="#surf" class="menu__link">
               <img src="img/header/surf-icon.svg" alt="surf">
               <span>surf</span>
             </a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">
+            <a href="#travel" class="menu__link">
               <img src="img/header/travel-icon.svg" alt="travel">
               <span>travel</span>
             </a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">
+            <a href="#sleep" class="menu__link">
               <img src="img/header/camp-icon.svg" alt="sleep">
               <span>sleep</span>
             </a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">
+            <a href="#shop" class="menu__link">
               <img src="img/header/surfboard-icon.svg" alt="shop">
               <span>shop</span>
             </a>
@@ -169,28 +169,29 @@
       <div class="header__location">California</div>
     </div>
     <div class="header__arrows animate__animated animate__fadeInDown animate__slow animate__infinite">
-      <a href="#">
+      <a href="#surf">
         <img src="img/header/arrows-down.svg" alt="arrowsDown">
       </a>
     </div>
   </header>
 
   <div class="container">
-    <section class="surf">
+    <section class="surf" id="surf">
       <div class="surf__title title">
         <span class="title__subname">
           Surf
-          <h3 class="title__name">Surf</h3>
+          <h3 class="title__name wow animate__animated animate__fadeInLeft" data-wow-offset="300">Surf</h3>
         </span>
       </div>
       <div class="surf__head">
-        <div class="surf__text">
+        <div class="surf__text wow animate__animated animate__fadeInRight" data-wow-offset="300">
           <div class="surf__subtitle-text subtitle-text">Current location</div>
-          <div class="surf__subtitle subtitle">California <span>|</span> USA</div>
+          <div class="surf__subtitle subtitle">
+            California <span>|</span> USA</div>
         </div>
       </div>
-      <div class="surf__map">
-        <div class="surf__map-slide surf__map-slide_1">
+      <div class="surf__map wow animate__animated animate__zoomInDown" data-wow-offset="300" data-wow-duration="1.5s">
+        <div class="surf__map-slide surf__map-slide_1 wow animate__animated animate__fadeInUpBig">
           <div class="surf__circle"></div>
           <div class="surf__description">
             <div class="surf__row">
@@ -222,7 +223,7 @@
           </div>
         </div>
         <!-- /.surf__map-slide -->
-        <div class="surf__map-slide surf__map-slide_2">
+        <div class="surf__map-slide surf__map-slide_2 wow animate__animated animate__fadeInUpBig">
           <div class="surf__circle"></div>
           <div class="surf__description">
             <div class="surf__row">
@@ -254,7 +255,7 @@
           </div>
         </div>
         <!-- /.surf__map-slide -->
-        <div class="surf__map-slide surf__map-slide_3">
+        <div class="surf__map-slide surf__map-slide_3 wow animate__animated animate__fadeInUpBig">
           <div class="surf__circle"></div>
           <div class="surf__description">
             <div class="surf__row">
@@ -286,7 +287,7 @@
           </div>
         </div>
         <!-- /.surf__map-slide -->
-        <div class="surf__map-slide surf__map-slide_4">
+        <div class="surf__map-slide surf__map-slide_4 wow animate__animated animate__fadeInUpBig">
           <div class="surf__circle"></div>
           <div class="surf__description">
             <div class="surf__row">
@@ -318,7 +319,7 @@
           </div>
         </div>
         <!-- /.surf__map-slide -->
-        <div class="surf__map-slide surf__map-slide_5">
+        <div class="surf__map-slide surf__map-slide_5 wow animate__animated animate__fadeInUpBig">
           <div class="surf__circle"></div>
           <div class="surf__description">
             <div class="surf__row">
@@ -350,7 +351,7 @@
           </div>
         </div>
         <!-- /.surf__map-slide -->
-        <div class="surf__map-slide surf__map-slide_6">
+        <div class="surf__map-slide surf__map-slide_6 wow animate__animated animate__fadeInUpBig">
           <div class="surf__circle"></div>
           <div class="surf__description">
             <div class="surf__row">
@@ -382,7 +383,7 @@
           </div>
         </div>
         <!-- /.surf__map-slide -->
-        <div class="surf__map-slide surf__map-slide_7">
+        <div class="surf__map-slide surf__map-slide_7 wow animate__animated animate__fadeInUpBig">
           <div class="surf__circle"></div>
           <div class="surf__description">
             <div class="surf__row">
@@ -414,7 +415,7 @@
           </div>
         </div>
         <!-- /.surf__map-slide -->
-        <div class="surf__map-slide surf__map-slide_8">
+        <div class="surf__map-slide surf__map-slide_8 wow animate__animated animate__fadeInUpBig">
           <div class="surf__circle"></div>
           <div class="surf__description">
             <div class="surf__row">
@@ -518,23 +519,24 @@
     </section>
     <!-- /.surf -->
 
-    <section class="travel">
+    <section class="travel" id="travel">
       <div class="travel__title title">
         <span class="title__subname">
           Travel
-          <h3 class="title__name">Travel</h3>
+          <h3 class="title__name wow animate__animated animate__fadeInLeft" data-wow-offset="300">Travel</h3>
         </span>
       </div>
       <div class="section-slider">
         <div class="section-slider__slide">
           <div class="section-slider__head" style="background-image: url('img/travel/travelslide-1.png');">
-            <div class="section-slider__titles">
+            <div class="section-slider__titles wow animate__animated animate__fadeInRight" data-wow-offset="300">
               <div class="section-slider__subtitle-text subtitle-text">Shore</div>
               <div class="section-slider__subtitle subtitle">Airlie Beach <span>|</span> Australia</div>
             </div>
           </div>
           <!-- /.section-slider__head -->
-          <div class="section-slider__body" style="background-image: url('img/travel/plane.png');">
+          <div class="section-slider__body wow animate__animated animate__fadeInUp"
+            style="background-image: url('img/travel/plane.png');">
             <div class="section-slider__titles_left">
               <div class="section-slider__subtitle-text subtitle-text">Airline</div>
               <div class="section-slider__subtitle subtitle">Virgin Australia
@@ -544,26 +546,26 @@
           </div>
           <!-- /.section-slider__body -->
           <div class="section-slider__info">
-            <div class="section-slider__info-item">
+            <div class="section-slider__info-item wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
               <p class="section-slider__info-subname">Destination</p>
               <h3 class="section-slider__info-name">Queensland<br>Australia</h3>
             </div>
-            <div class="section-slider__info-item">
+            <div class="section-slider__info-item wow animate__animated animate__fadeInUp" data-wow-delay="0.7s">
               <p class="section-slider__info-subname">Distance</p>
               <h3 class="section-slider__info-name">7,065 Miles</h3>
             </div>
-            <div class="section-slider__info-item">
+            <div class="section-slider__info-item wow animate__animated animate__fadeInUp" data-wow-delay="0.9s">
               <p class="section-slider__info-subname">Travel Time</p>
               <h3 class="section-slider__info-name">23 Hours<br>5 Minutes</h3>
             </div>
-            <div class="section-slider__info-item">
+            <div class="section-slider__info-item wow animate__animated animate__fadeInUp" data-wow-delay="1.1s">
               <p class="section-slider__info-subname">Pricing</p>
               <h3 class="section-slider__info-name">$1,976 USD</h3>
               <p>Round Trip</p>
             </div>
           </div>
           <!-- /.section-slider__info -->
-          <div class="section-slider__link">
+          <div class="section-slider__link wow animate__animated animate__fadeInUp">
             <a href="#" class="btn">Book <span>Flight</span></a>
           </div>
         </div>
@@ -699,23 +701,23 @@
     </section>
     <!-- /.travel -->
 
-    <section class="sleep">
+    <section class="sleep" id="sleep">
       <div class="sleep__title title">
         <span class="title__subname">
           Sleep
-          <h3 class="title__name">Sleep</h3>
+          <h3 class="title__name wow animate__animated animate__fadeInLeft" data-wow-offset="300">Sleep</h3>
         </span>
       </div>
       <div class="section-slider">
         <div class="section-slider__slide">
           <div class="section-slider__head" style="background-image: url('img/sleep/sleepslide-1.png');">
-            <div class="section-slider__titles">
+            <div class="section-slider__titles wow animate__animated animate__fadeInRight" data-wow-offset="300">
               <div class="section-slider__subtitle-text subtitle-text">Resorts</div>
               <div class="section-slider__subtitle subtitle">Auberge <span>|</span> Australia</div>
             </div>
           </div>
           <!-- /.section-slider__head -->
-          <div class="section-slider__body sleep__body"
+          <div class="section-slider__body sleep__body wow animate__animated animate__fadeInUp"
             style="background-image: url('img/sleep/body-bg2.png'), url('img/sleep/body-bg1.png');">
             <div class="section-slider__titles_left">
               <div class="section-slider__subtitle-text subtitle-text">Rating</div>
@@ -733,11 +735,11 @@
           </div>
           <!-- /.section-slider__body -->
           <div class="section-slider__info">
-            <div class="section-slider__info-item">
+            <div class="section-slider__info-item wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
               <p class="section-slider__info-subname">Resort</p>
               <h3 class="section-slider__info-name">Auberge<br>Australia</h3>
             </div>
-            <div class="section-slider__info-item">
+            <div class="section-slider__info-item wow animate__animated animate__fadeInUp" data-wow-delay="0.7s">
               <p class="section-slider__info-subname"># of Nights</p>
               <h3 class="section-slider__info-name">
                 <div class="quantity">
@@ -747,7 +749,7 @@
               </h3>
 
             </div>
-            <div class="section-slider__info-item">
+            <div class="section-slider__info-item wow animate__animated animate__fadeInUp" data-wow-delay="0.9s">
               <p class="section-slider__info-subname"># of Guests</p>
               <h3 class="section-slider__info-name">
                 <div class="quantity">
@@ -756,7 +758,7 @@
                 Guests
               </h3>
             </div>
-            <div class="section-slider__info-item">
+            <div class="section-slider__info-item wow animate__animated animate__fadeInUp" data-wow-delay="1.1s">
               <p class="section-slider__info-subname">Pricing</p>
               <h3 class="section-slider__info-name">
                 <span class="summ" data-nights="55" data-guests="25"></span>
@@ -766,8 +768,8 @@
             </div>
           </div>
           <!-- /.section-slider__info -->
-          <div class="section-slider__link">
-            <a href="#" class="btn">Book <span>Flight</span></a>
+          <div class="section-slider__link wow animate__animated animate__fadeInUp">
+            <a href="#" class="btn">Book <span>Stay</span></a>
           </div>
         </div>
         <!-- /.section-slider__slide -->
@@ -968,11 +970,11 @@
     </section>
     <!-- /.sleep -->
 
-    <section class="shop">
+    <section class="shop" id="shop">
       <div class="shop__title title">
         <span class="title__subname">
           Shop
-          <h3 class="title__name">Shop</h3>
+          <h3 class="title__name wow animate__animated animate__fadeInLeft" data-wow-offset="300">Shop</h3>
         </span>
       </div>
       <div class="shop__slider">
@@ -997,7 +999,7 @@
                 <a href="#" class="btn">Drop <span>In</span></a>
               </div>
             </div>
-            <div class="shop__body">
+            <div class="shop__body wow animate__animated animate__fadeInUp" data-wow-offset="300">
               <div class="shop__surfboard">
                 <img src="img/shop/surfboard.png" alt="surfboard">
                 <div class="shop__surfboard-row row-1 shop__surfboard-row_active">
@@ -1150,7 +1152,7 @@
     <!-- /.shop -->
 
     <footer class="footer">
-      <div class="footer__link">
+      <div class="footer__link wow animate__animated animate__fadeInUp">
         <a href="#" class="btn">Go <span>Surf</span></a>
       </div>
       <p class="footer__copy">&copy; Go-Surf 2018. All Rights Reserved.</p>
@@ -1161,6 +1163,9 @@
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="js/script.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 </body>
 
 </html>

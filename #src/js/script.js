@@ -1,4 +1,5 @@
 @@include('slick.min.js');
+@@include('wow.min.js');
 
 $(document).ready(function () {
 
@@ -21,6 +22,20 @@ $(document).ready(function () {
     $('.menu').toggleClass('menu_active');
     $('.header__burger').toggleClass('header__burger_active');
     $('body').toggleClass('lock');
+  });
+
+  $(".header__menu").on("click", "a", function (event) {
+    event.preventDefault();
+    var id = $(this).attr('href'),
+      top = $(id).offset().top;
+    $('body,html').animate({ scrollTop: top }, 1500);
+  });
+
+  $(".header__arrows").on("click", "a", function (event) {
+    event.preventDefault();
+    var id = $(this).attr('href'),
+      top = $(id).offset().top;
+    $('body,html').animate({ scrollTop: top }, 1500);
   });
 
   // Surf section
