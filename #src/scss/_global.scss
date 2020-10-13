@@ -4,6 +4,8 @@ body {
   font-weight: 400;
   background-color: #171919;
   color: $main;
+  min-width: 320px;
+  overflow-x: hidden;
 }
 .container {
   max-width: 1920px;

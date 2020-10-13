@@ -146,4 +146,16 @@ $(document).ready(function () {
   });
   let summ = $('.nights').val() * $('.summ').data('nights') + ($('.guests').val() - 1) * $('.summ').data('guests');
   $('.summ').html('$' + summ);
+
+
+  // Shop section
+  $('.shop__surfboard-row').on('click', function () {
+    $(this).toggleClass('shop__surfboard-row_active')
+  });
+
+  $('.shop__slider').slick({
+    infinite: true,
+    fade: true,
+  });
+
 });

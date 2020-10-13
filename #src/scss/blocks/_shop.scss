@@ -2,6 +2,8 @@
   background-image: url('../img/shop/shop-bg.png');
   background-repeat: no-repeat;
   background-position: right center;
+  position: relative;
+  margin: 0 0 200px 0;
   &__row {
     display: flex;
     align-items: center;
@@ -37,10 +39,23 @@
     }
   }
   &__body {
+    flex-basis: 65%;
     display: flex;
   }
   &__surfboard {
     position: relative;
+    &-row {
+      &_active {
+        .shop__surfboard-circle {
+          &::after {
+            transform: translate(-50%, -50%) rotate(0deg);
+          }
+        }
+        .shop__surfboard-text {
+          display: block;
+        }
+      }
+    }
     .row-1 {
       position: absolute;
       left: 170px;
@@ -77,6 +92,7 @@
       border-radius: 50%;
       background-color: $main;
       position: relative;
+      cursor: pointer;
       &::before {
         content: '';
         position: absolute;
@@ -99,6 +115,7 @@
       }
     }
     &-text {
+      display: none;
       font-size: 24px;
       line-height: 24px;
       font-weight: 800;
@@ -120,7 +137,7 @@
     }
   }
   &__extras {
-    margin: 0 0 0 167px;
+    margin: 0 80px 0 auto;
     align-self: flex-end;
     &-row {
       display: flex;
@@ -155,6 +172,159 @@
       font-size: 18px;
       line-height: 40px;
       font-weight: 800;
+    }
+  }
+  .slick-arrow {
+    position: absolute;
+    top: 200px;
+    font-size: 0;
+    width: 25px;
+    height: 20px;
+    opacity: 0.25;
+    z-index: 1100;
+  }
+  .slick-arrow.slick-prev{
+    right: 125px;
+    background: url('../img/header/arrow-left.svg') 0 0 no-repeat;
+  }
+  .slick-arrow.slick-next{
+    right: 80px;
+    background: url('../img/header/arrow-right.svg') 0 0 no-repeat;
+  }
+}
+
+@media (max-width: 1160px) {
+  .shop {
+    &__row {
+      display: block;
+    }
+    &__content {
+      margin: 0 0 50px 30px;
+    }
+    &__body {
+      justify-content: space-between;
+      margin: 0 80px 0 30px;
+    }
+    &__extras {
+      margin: 0;
+    }
+    &__surfboard {
+      &-text {
+        padding: 0 0 0 30px;
+        &::before {
+          width: 20px;
+        }
+      }
+      .row-3 {
+        .shop__surfboard-text {
+          padding: 0 0 0 30px;
+          left: 40px;
+          right: auto;
+          &::before {
+            width: 20px;
+            left: 0;
+            right: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .shop {
+    &__subtitle-text {
+      &_left {
+        padding: 0 45px 0 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .shop {
+    margin: 0 0 80px 0;
+    &__body {
+      display: block;
+    }
+    &__surfboard {
+      margin: 0 0 50px 0;
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .shop {
+    &__title {
+      margin: 0 0 80px 15px;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .shop {
+    &__surfboard {
+      &-text {
+        padding: 0;
+        width: 230px;
+        top: 25px;
+        &::before {
+          display: none;
+        }
+      }
+      .row-1 {
+        .shop__surfboard-text {
+          left: -125px;
+        }
+      }
+      .row-2 {
+        .shop__surfboard-text {
+          left: 10px;
+        }
+      }
+      .row-3 {
+        .shop__surfboard-text {
+          padding: 0;
+          left: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  .shop {
+    &__subtitle-text {
+      &_left {
+        padding: 0 30px 0 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  .shop {
+    &__body {
+      margin: 0 0 0 30px;
+    }
+    &__extras {
+      &-row {
+        display: block;
+      }
+      &-item {
+        &:not(:last-child) {
+          margin: 0;
+        }
+      }
+    }
+    .slick-arrow {
+      top: 75px;
+    }
+    .slick-arrow.slick-prev{
+      right: 75px;
+    }
+    .slick-arrow.slick-next{
+      right: 30px;
     }
   }
 }
