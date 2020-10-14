@@ -98,6 +98,7 @@ body {
   font-weight: 400;
   background-color: #171919;
   color: #ffffff;
+  position: relative;
   min-width: 320px;
   overflow-x: hidden;
 }
@@ -222,6 +223,32 @@ body {
   display: inline-block;
   padding: 0;
   margin: 0 0 0 -25px;
+}
+
+.scrolltop {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4AF6CD;
+  cursor: pointer;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 99999;
+}
+
+.scrolltop__link {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.scrolltop__link img {
+  width: 100%;
 }
 
 .header {

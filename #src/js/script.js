@@ -24,6 +24,7 @@ $(document).ready(function () {
     $('body').toggleClass('lock');
   });
 
+  // Якоря на ссылки
   $(".header__menu").on("click", "a", function (event) {
     event.preventDefault();
     var id = $(this).attr('href'),
@@ -36,6 +37,19 @@ $(document).ready(function () {
     var id = $(this).attr('href'),
       top = $(id).offset().top;
     $('body,html').animate({ scrollTop: top }, 1500);
+  });
+
+  // Scroll to top
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 40) {
+      $('.scrolltop').fadeIn();
+    } else {
+      $('.scrolltop').fadeOut();
+    }
+  });
+
+  $('.scrolltop').click(function () {
+    $('html, body').animate({ scrollTop: 0 }, 800);
   });
 
   // Surf section
